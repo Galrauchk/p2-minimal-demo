@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Droit social" description="Valois & Associés — Expertise en droit social : contrats de travail, contentieux prud'homal, restructurations sociales.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <a href="/expertise" class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted hover:text-accent transition-colors block mb-6">← Expertise</a>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Domaine 03</p>
+      <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Droit social.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Sécuriser vos décisions RH et accompagner vos transformations sociales.
+          </h2>
+          <div class="prose-minimal">
+            <p>Le droit social est un domaine en constante évolution, qui touche à la fois à la stratégie d'entreprise et aux situations individuelles les plus sensibles. Maître Claire Rousseau accompagne directions générales et DRH avec une approche à la fois rigoureuse et pragmatique.</p>
+            <p>Nous intervenons aussi bien en conseil préventif — pour sécuriser vos pratiques quotidiennes — qu'en contentieux, devant le Conseil de prud'hommes ou les juridictions d'appel.</p>
+            <h2>Conseil et prévention</h2>
+            <p>Nous aidons nos clients à structurer leurs politiques RH, à rédiger leurs contrats de travail et accords collectifs, à anticiper les risques liés aux décisions de rupture et à gérer les relations avec les instances représentatives du personnel.</p>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Nos missions</p>
+            <ul class="space-y-3">
+              {['Rédaction de contrats de travail', 'Rupture du contrat (licenciement, RCC)', 'Contentieux prud\'homal', 'Négociation d\'accords collectifs', 'Plan de sauvegarde de l\'emploi', 'Relations avec les IRP', 'Harcèlement et risques psychosociaux', 'Audit social pré-acquisition'].map(item => (
+                <li class="text-sm font-light text-body leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-0.5 shrink-0">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-10" style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Interlocutrice</p>
+            <p class="font-display italic text-lg text-dark"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Claire Rousseau</p>
+            <a href="/contact" class="btn-secondary mt-4 inline-flex">Prendre rendez-vous →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

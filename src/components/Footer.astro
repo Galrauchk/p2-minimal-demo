@@ -1,0 +1,61 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-white">
+  <div class="max-w-[1100px] mx-auto px-8 py-14">
+
+    <!-- Top row -->
+    <div class="flex flex-col md:flex-row justify-between gap-10 pb-10" style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-baseline gap-2 mb-3">
+          <span class="font-display italic text-xl font-normal text-white" style="font-family: 'Playfair Display', Georgia, serif;">Valois &amp;</span>
+          <span class="font-light text-base text-white tracking-wide">Associés</span>
+        </div>
+        <p class="text-[0.8125rem] text-muted font-light leading-relaxed max-w-xs">
+          Cabinet d'avocats d'affaires.<br/>Montpellier · Paris · Lyon
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col gap-3">
+        <span class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent">Expertise</span>
+        <a href="/expertise/droit-des-societes" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Droit des sociétés</a>
+        <a href="/expertise/fusions-acquisitions" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Fusions-acquisitions</a>
+        <a href="/expertise/droit-social" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Droit social</a>
+        <a href="/expertise/propriete-intellectuelle" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Propriété intellectuelle</a>
+        <a href="/expertise/contentieux" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Contentieux</a>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <span class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent">Cabinet</span>
+        <a href="/cabinet" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Notre cabinet</a>
+        <a href="/equipe" class="text-[0.8125rem] text-muted hover:text-white transition-colors">L'équipe</a>
+        <a href="/actualites" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Actualités</a>
+        <a href="/temoignages" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Témoignages</a>
+        <a href="/contact" class="text-[0.8125rem] text-muted hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-3">
+        <span class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent">Contact</span>
+        <a href="tel:+33467112233" class="text-[0.8125rem] text-muted hover:text-white transition-colors">04 67 11 22 33</a>
+        <a href="mailto:contact@valois-associes.fr" class="text-[0.8125rem] text-muted hover:text-white transition-colors">contact@valois-associes.fr</a>
+        <p class="text-[0.8125rem] text-muted font-light">34000 Montpellier</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom row -->
+    <div class="pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[0.75rem] text-muted">&copy; {year} Valois & Associés. Tous droits réservés.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-[0.75rem] text-muted hover:text-white transition-colors">Mentions légales</a>
+        <a href="#" class="text-[0.75rem] text-muted hover:text-white transition-colors">Politique de confidentialité</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

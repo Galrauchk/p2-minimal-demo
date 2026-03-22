@@ -1,0 +1,48 @@
+---
+const pathname = Astro.url.pathname;
+
+const nav = [
+  { href: '/expertise',   label: 'Expertise' },
+  { href: '/cabinet',     label: 'Cabinet' },
+  { href: '/equipe',      label: 'Équipe' },
+  { href: '/actualites',  label: 'Actualités' },
+  { href: '/contact',     label: 'Contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white" style="border-bottom: 1px solid #f1f5f9;">
+  <div class="max-w-[1100px] mx-auto px-8 h-[68px] flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-baseline gap-2 leading-none">
+      <span class="font-display italic text-xl font-normal text-dark" style="font-family: 'Playfair Display', Georgia, serif;">Valois &amp;</span>
+      <span class="font-sans font-light text-base text-dark tracking-wide">Associés</span>
+    </a>
+
+    <!-- Navigation desktop -->
+    <nav class="hidden md:flex items-center gap-9">
+      {nav.map(({ href, label }) => (
+        <a
+          href={href}
+          class={`nav-link text-[0.8125rem] font-medium tracking-wide text-body transition-colors ${
+            pathname.startsWith(href) ? 'text-dark' : ''
+          }`}
+          {...(pathname.startsWith(href) ? { 'data-active': '' } : {})}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Téléphone -->
+    <div class="hidden lg:flex items-center gap-2">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="1.5">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+      </svg>
+      <a href="tel:+33467112233" class="text-[0.8125rem] font-normal text-accent hover:opacity-80 transition-opacity tracking-wide">
+        04 67 11 22 33
+      </a>
+    </div>
+
+  </div>
+</header>

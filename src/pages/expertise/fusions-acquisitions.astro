@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Fusions-acquisitions" description="Valois & Associés — Expertise en fusions-acquisitions : due diligence, structuration, négociation et closing.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <a href="/expertise" class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted hover:text-accent transition-colors block mb-6">← Expertise</a>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Domaine 02</p>
+      <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Fusions-acquisitions.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Sécuriser et optimiser chaque étape d'une opération de transmission ou d'acquisition.
+          </h2>
+          <div class="prose-minimal">
+            <p>Les opérations de fusions-acquisitions sont parmi les plus complexes et les plus risquées sur le plan juridique. Un conseil mal structuré, des garanties insuffisantes ou une due diligence incomplète peuvent avoir des conséquences lourdes, des années après le closing.</p>
+            <p>Notre équipe accompagne acquéreurs et cédants à toutes les étapes : de la première réflexion stratégique jusqu'à l'intégration post-acquisition. Nous travaillons en coordination étroite avec vos conseils financiers, bancaires et fiscaux.</p>
+            <h2>Notre méthode</h2>
+            <p>Nous commençons par une phase d'écoute approfondie pour comprendre vos objectifs et contraintes. Nous structurons ensuite l'opération de façon à optimiser la protection de chaque partie, en anticipant les risques identifiés lors de la due diligence juridique.</p>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Nos missions</p>
+            <ul class="space-y-3">
+              {['Due diligence juridique', 'Structuration de l\'opération', 'Rédaction du LOI / term sheet', 'Protocole de cession', 'Garanties d\'actif et de passif', 'Conditions suspensives', 'Accompagnement au closing', 'Suivi post-acquisition'].map(item => (
+                <li class="text-sm font-light text-body leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-0.5 shrink-0">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-10" style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Interlocuteurs</p>
+            <p class="font-display italic text-base text-dark mb-1"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Alexandre Valois</p>
+            <p class="font-display italic text-base text-dark"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Claire Rousseau</p>
+            <a href="/contact" class="btn-secondary mt-4 inline-flex">Prendre rendez-vous →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

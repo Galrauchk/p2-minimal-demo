@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const associes = [
+  {
+    prenom: 'Alexandre',
+    nom: 'Valois',
+    titre: 'Avocat associé fondateur',
+    specialites: ['Droit des sociétés', 'Fusions-acquisitions'],
+    formation: 'Docteur en droit des affaires — Université Paris I Panthéon-Sorbonne',
+    bio: 'Maître Alexandre Valois a fondé le cabinet en 2008 après une expérience de huit ans au sein de grands cabinets parisiens. Spécialiste des opérations de restructuration et des acquisitions complexes, il intervient régulièrement pour des groupes industriels et des fonds d\'investissement.',
+    barreau: 'Barreau de Montpellier',
+  },
+  {
+    prenom: 'Claire',
+    nom: 'Rousseau',
+    titre: 'Avocate associée',
+    specialites: ['Droit social', 'Fusions-acquisitions'],
+    formation: 'Master 2 Droit social — Université Montpellier I',
+    bio: 'Maître Claire Rousseau accompagne les directions des ressources humaines et les comités de direction dans toutes les problématiques sociales liées aux transformations d\'entreprise. Reconnue pour sa pédagogie, elle intervient en conseil comme en contentieux.',
+    barreau: 'Barreau de Montpellier',
+  },
+  {
+    prenom: 'Thomas',
+    nom: 'Maréchal',
+    titre: 'Avocat associé',
+    specialites: ['Propriété intellectuelle', 'Contentieux'],
+    formation: 'LL.M. Intellectual Property — Queen Mary University of London',
+    bio: 'Maître Thomas Maréchal est intervenu dans de nombreuses affaires de protection de marques, de contrefaçon et de litiges contractuels complexes. Bilingue français-anglais, il accompagne des entreprises tech et des groupes internationaux dans la valorisation et la défense de leur patrimoine immatériel.',
+    barreau: 'Barreau de Paris',
+  },
+];
+---
+
+<Layout title="L'équipe" description="Les trois avocats associés de Valois & Associés — Alexandre Valois, Claire Rousseau et Thomas Maréchal.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">03 — Équipe</p>
+      <h1 class="font-display font-bold text-[clamp(2.75rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Les associés.
+      </h1>
+    </div>
+  </section>
+
+  {associes.map((a, i) => (
+    <section class="py-24" style="border-bottom: 1px solid #f1f5f9;">
+      <div class="max-w-[1100px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-16 items-start" data-reveal>
+
+          <!-- Identité -->
+          <div>
+            <!-- Avatar placeholder -->
+            <div class="w-32 h-32 bg-slate-50 flex items-center justify-center mb-8" style="border: 1px solid #f1f5f9;">
+              <span class="font-display font-bold text-3xl text-slate-200"
+                    style="font-family: 'Playfair Display', Georgia, serif;">
+                {a.prenom[0]}{a.nom[0]}
+              </span>
+            </div>
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-2">0{i+1}</p>
+            <h2 class="font-display text-[1.75rem] font-bold text-dark leading-tight"
+                style="font-family: 'Playfair Display', Georgia, serif;">
+              Maître {a.prenom}<br/>{a.nom}
+            </h2>
+            <p class="text-sm font-light text-muted mt-2">{a.titre}</p>
+            <p class="text-[0.7rem] font-medium tracking-[0.1em] uppercase text-accent mt-4">{a.barreau}</p>
+          </div>
+
+          <!-- Bio -->
+          <div class="pt-2">
+            <p class="text-base font-light text-body leading-[1.9] mb-8">{a.bio}</p>
+            <div style="border-top: 1px solid #f1f5f9; padding-top: 1.5rem;">
+              <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Spécialités</p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                {a.specialites.map(s => (
+                  <span class="text-[0.75rem] font-medium tracking-wide text-dark px-3 py-1" style="border: 1px solid #f1f5f9;">{s}</span>
+                ))}
+              </div>
+              <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-2">Formation</p>
+              <p class="text-sm font-light text-body">{a.formation}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="py-24">
+    <div class="max-w-[1100px] mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8" data-reveal>
+      <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] text-dark"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Discutez de votre dossier avec l'un de nos associés.
+      </h2>
+      <a href="/contact" class="btn-primary shrink-0">Prendre contact →</a>
+    </div>
+  </section>
+
+</Layout>

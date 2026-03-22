@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const domaines = [
+  {
+    n: '01', href: '/expertise/droit-des-societes',
+    title: 'Droit des sociétés',
+    desc: 'Constitution, gouvernance, cession de parts, pactes d\'actionnaires, restructurations et dissolution. Nous accompagnons la vie juridique complète de votre entreprise.',
+  },
+  {
+    n: '02', href: '/expertise/fusions-acquisitions',
+    title: 'Fusions-acquisitions',
+    desc: 'Due diligence juridique, structuration de l\'opération, négociation des garanties, closing et post-acquisition. Une expertise reconnue en transactions complexes.',
+  },
+  {
+    n: '03', href: '/expertise/droit-social',
+    title: 'Droit social',
+    desc: 'Contrats de travail, licenciements, négociation collective, contentieux prud\'homal, restructurations sociales. Conseil et représentation à toutes les étapes.',
+  },
+  {
+    n: '04', href: '/expertise/propriete-intellectuelle',
+    title: 'Propriété intellectuelle',
+    desc: 'Dépôt et gestion de marques, brevets, droits d\'auteur, contentieux en contrefaçon, licences et transferts de technologie.',
+  },
+  {
+    n: '05', href: '/expertise/contentieux',
+    title: 'Contentieux',
+    desc: 'Litiges commerciaux, recouvrement de créances, arbitrage, médiation et représentation devant les juridictions civiles et commerciales.',
+  },
+];
+---
+
+<Layout title="Nos domaines d'expertise" description="Valois & Associés — Cinq pôles d'expertise en droit des affaires : droit des sociétés, fusions-acquisitions, droit social, propriété intellectuelle, contentieux.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">02 — Expertise</p>
+      <h1 class="font-display font-bold text-[clamp(2.75rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Nos domaines d'expertise.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-20" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-base font-light text-body leading-[1.9] max-w-2xl" data-reveal>
+        Chacun de nos associés a développé une spécialisation approfondie dans son domaine. Ensemble, nous couvrons l'intégralité du droit des affaires pour vous offrir un conseil complet et cohérent, quelle que soit la complexité de votre situation.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-[1100px] mx-auto px-8">
+      {domaines.map(({ n, href, title, desc }) => (
+        <a href={href} class="service-item block py-10 px-2" data-reveal>
+          <div class="grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 items-center">
+            <span class="font-display font-bold text-[3.5rem] leading-none select-none"
+                  style="font-family: 'Playfair Display', Georgia, serif; color: #f1f5f9;">{n}</span>
+            <div>
+              <h2 class="service-title text-[1.125rem] font-semibold text-dark uppercase tracking-[0.12em] mb-2 transition-colors duration-200">{title}</h2>
+              <p class="text-sm font-light text-body leading-[1.8] max-w-xl">{desc}</p>
+            </div>
+            <span class="service-cta text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent whitespace-nowrap">
+              Découvrir →
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="py-24" style="border-top: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8" data-reveal>
+      <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] text-dark"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Votre situation ne rentre pas dans une case ?<br/>Parlons-en directement.
+      </h2>
+      <a href="/contact" class="btn-primary shrink-0">Nous contacter →</a>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  {
+    href: '/actualites/le-cadre-juridique-des-fusions',
+    cat: 'Fusions-acquisitions',
+    date: '14 janvier 2025',
+    auteur: 'Maître Alexandre Valois',
+    title: 'Le cadre juridique des fusions en 2025 : nouvelles obligations pour les parties',
+    excerpt: 'Les récentes réformes législatives modifient en profondeur les procédures d\'audit et les garanties exigées lors des opérations de fusion. Un point complet sur les nouvelles obligations.',
+  },
+  {
+    href: '/actualites/protection-propriete-intellectuelle',
+    cat: 'Propriété intellectuelle',
+    date: '8 novembre 2024',
+    auteur: 'Maître Thomas Maréchal',
+    title: 'Protéger efficacement son patrimoine immatériel face aux risques numériques',
+    excerpt: 'Dans un contexte de digitalisation accélérée, les actifs immatériels représentent souvent la principale valeur de l\'entreprise. Stratégies et bonnes pratiques juridiques.',
+  },
+  {
+    href: '/actualites/droit-social-transformations-2025',
+    cat: 'Droit social',
+    date: '22 octobre 2024',
+    auteur: 'Maître Claire Rousseau',
+    title: 'Transformations organisationnelles et obligations employeur : ce qui change en 2025',
+    excerpt: 'Réorganisations, télétravail, ruptures conventionnelles collectives — le point exhaustif sur le cadre légal applicable aux transformations d\'entreprise.',
+  },
+];
+---
+
+<Layout title="Actualités juridiques" description="Publications et analyses de Valois & Associés sur l'actualité du droit des affaires.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">05 — Actualités</p>
+      <h1 class="font-display font-bold text-[clamp(2.75rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Publications & analyses.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-[1100px] mx-auto px-8">
+      {articles.map(({ href, cat, date, auteur, title, excerpt }) => (
+        <a href={href} class="blog-item block py-12" style="border-bottom: 1px solid #f1f5f9;" data-reveal>
+          <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-8 items-start">
+            <div>
+              <div class="flex items-center gap-4 mb-4">
+                <span class="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">{cat}</span>
+              </div>
+              <h2 class="blog-title font-display font-normal text-[1.5rem] text-dark mb-3 leading-snug"
+                  style="font-family: 'Playfair Display', Georgia, serif;">{title}</h2>
+              <p class="text-sm font-light text-body leading-relaxed">{excerpt}</p>
+              <span class="btn-secondary inline-flex mt-6">Lire l'article →</span>
+            </div>
+            <div class="pt-1">
+              <p class="text-[0.7rem] font-medium tracking-[0.2em] uppercase text-muted mb-1">{auteur}</p>
+              <p class="text-sm font-light text-muted">{date}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+</Layout>

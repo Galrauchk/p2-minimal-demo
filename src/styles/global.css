@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --color-accent: #0066ff;
+  --color-dark:   #0f172a;
+  --color-body:   #475569;
+  --color-muted:  #94a3b8;
+  --color-border: #f1f5f9;
+}
+
+/* ─── Cursor ──────────────────────────────────────────── */
+html, body { cursor: none; }
+*, *::before, *::after { cursor: none !important; }
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 6px; height: 6px;
+  background: #0066ff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 38px; height: 38px;
+  border: 1px solid rgba(0, 102, 255, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+  will-change: left, top;
+}
+.cursor-ring.ring-hover {
+  width: 54px; height: 54px;
+  border-color: rgba(0, 102, 255, 0.5);
+}
+
+/* ─── Nav underline (scaleX) ──────────────────────────── */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 100%; height: 1px;
+  background: #0f172a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link[data-active]::after { transform: scaleX(1); }
+.nav-link:hover { color: #0f172a; }
+
+/* ─── Service item hover ──────────────────────────────── */
+.service-item {
+  position: relative;
+  border-bottom: 1px solid #f1f5f9;
+  transition: border-color 0.2s ease;
+}
+.service-item:hover { border-color: #0066ff; }
+.service-item:hover .service-title { color: #0066ff; }
+.service-item:hover .service-cta { opacity: 1; transform: translateX(0); }
+.service-cta {
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* ─── Blog item hover ─────────────────────────────────── */
+.blog-title { transition: transform 0.2s ease, color 0.2s ease; }
+.blog-item:hover .blog-title { transform: translateX(4px); color: #0066ff; }
+
+/* ─── Scroll reveal ───────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+[data-reveal].visible { opacity: 1; transform: translateY(0); }
+
+/* ─── Page fade ───────────────────────────────────────── */
+main { animation: pageFade 0.35s ease both; }
+@keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ─── Scroll indicator ────────────────────────────────── */
+.scroll-line { animation: scrollDrop 1.8s ease-in-out infinite; }
+@keyframes scrollDrop {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  40%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* ─── Buttons ─────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: #0f172a; color: white;
+  font-family: 'Inter', sans-serif; font-size: 0.875rem;
+  font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 0; transition: background 0.3s ease;
+}
+.btn-primary:hover { background: #0066ff; }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #0f172a;
+  color: #0f172a;
+  font-family: 'Inter', sans-serif; font-size: 0.8125rem;
+  font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.btn-secondary:hover { color: #0066ff; border-color: #0066ff; }
+
+/* ─── Selection ───────────────────────────────────────── */
+::selection { background: #0066ff; color: white; }
+
+/* ─── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: white; }
+::-webkit-scrollbar-thumb { background: #e2e8f0; }
+
+/* ─── Prose ───────────────────────────────────────────── */
+.prose-minimal h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400; font-style: italic;
+  color: #0f172a; margin-top: 3.5rem; margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+.prose-minimal p {
+  font-size: 1.0625rem; color: #475569;
+  line-height: 1.9; margin-bottom: 1.5rem; font-weight: 300;
+}
+.prose-minimal blockquote {
+  border-left: 2px solid #0066ff; padding-left: 1.5rem;
+  margin: 2.5rem 0; color: #0f172a;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic; font-size: 1.125rem; line-height: 1.7;
+}

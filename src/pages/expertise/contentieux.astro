@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Contentieux" description="Valois & Associés — Expertise en contentieux : litiges commerciaux, arbitrage, médiation, représentation judiciaire.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <a href="/expertise" class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted hover:text-accent transition-colors block mb-6">← Expertise</a>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Domaine 05</p>
+      <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Contentieux.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Défendre vos intérêts avec rigueur, devant les tribunaux ou en dehors.
+          </h2>
+          <div class="prose-minimal">
+            <p>Lorsqu'un litige surgit, la réactivité et la stratégie judiciaire font souvent la différence. Maître Thomas Maréchal et l'équipe de Valois & Associés sont présents à vos côtés dès les premières heures du conflit pour définir la meilleure approche.</p>
+            <p>Notre expérience couvre l'ensemble du contentieux commercial : inexécution de contrats, litiges entre associés, recouvrement de créances, responsabilité des dirigeants, concurrence déloyale et bien d'autres.</p>
+            <h2>Modes alternatifs de règlement des conflits</h2>
+            <p>Nous privilégions, quand c'est possible, les solutions négociées : médiation, conciliation ou arbitrage. Ces voies permettent souvent d'aboutir à une résolution plus rapide et moins coûteuse qu'un procès, tout en préservant les relations commerciales.</p>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Nos missions</p>
+            <ul class="space-y-3">
+              {['Litiges contractuels', 'Recouvrement de créances', 'Contentieux entre associés', 'Responsabilité des dirigeants', 'Concurrence déloyale', 'Arbitrage et médiation commerciale', 'Référés d\'urgence', 'Représentation en appel'].map(item => (
+                <li class="text-sm font-light text-body leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-0.5 shrink-0">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-10" style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Interlocuteur</p>
+            <p class="font-display italic text-lg text-dark"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Thomas Maréchal</p>
+            <a href="/contact" class="btn-secondary mt-4 inline-flex">Prendre rendez-vous →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

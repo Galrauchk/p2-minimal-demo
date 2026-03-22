@@ -1,17 +1,197 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Accueil" description="Valois & Associés — Cabinet d'avocats d'affaires à Montpellier, Paris et Lyon. Excellence juridique au service de votre croissance.">
+
+  <!-- ─── HERO ───────────────────────────────────────── -->
+  <section class="relative min-h-screen flex flex-col justify-center pt-[68px]" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8 w-full py-24">
+
+      <p class="text-[0.7rem] font-medium tracking-[0.3em] uppercase text-accent mb-10">
+        Cabinet d'avocats · Montpellier Paris Lyon
+      </p>
+
+      <h1 class="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-dark leading-[1.05] mb-8 max-w-3xl"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        L'excellence juridique<br/>
+        au service de votre<br/>
+        croissance.
+      </h1>
+
+      <p class="text-lg font-light text-body leading-[1.9] max-w-[480px] mb-12">
+        Conseil stratégique et accompagnement juridique
+        des entreprises ambitieuses depuis 2008.
+      </p>
+
+      <a href="/contact" class="btn-primary">
+        Prendre contact
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-8 flex flex-col items-center gap-2">
+      <span class="text-[0.6rem] tracking-[0.3em] uppercase text-muted">Défiler</span>
+      <div class="w-px h-10 bg-muted scroll-line"></div>
+    </div>
+
+    <!-- Decorative initials -->
+    <div class="absolute bottom-16 right-8 hidden lg:block" style="opacity: 0.04;">
+      <span class="font-display font-bold text-[10rem] text-dark leading-none"
+            style="font-family: 'Playfair Display', Georgia, serif;">V&amp;A</span>
+    </div>
+  </section>
+
+  <!-- ─── INTRO 65/35 ────────────────────────────────── -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20 items-start">
+
+        <div data-reveal>
+          <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-6">Notre cabinet</p>
+          <h2 class="font-display italic text-[clamp(1.75rem,3vw,2.5rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Un partenaire juridique de confiance, au plus près de vos enjeux stratégiques.
+          </h2>
+          <p class="text-base font-light text-body leading-[1.9] max-w-xl mb-8">
+            Fondé à Montpellier en 2008, Valois & Associés réunit trois avocats associés spécialisés dans le droit des affaires. Notre approche combine expertise technique pointue et compréhension fine des réalités économiques de nos clients.
+          </p>
+          <a href="/cabinet" class="btn-secondary">
+            Découvrir le cabinet →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-0 pt-8" data-reveal>
+          {[
+            { n: '15+', label: "Années d'expérience" },
+            { n: '600+', label: 'Dossiers traités' },
+            { n: '3', label: 'Avocats associés' },
+            { n: '98%', label: 'Clients satisfaits' },
+          ].map(({ n, label }) => (
+            <div class="py-6" style="border-bottom: 1px solid #f1f5f9;">
+              <span class="block font-display font-bold text-[2.25rem] text-dark leading-none"
+                    style="font-family: 'Playfair Display', Georgia, serif;">{n}</span>
+              <span class="text-[0.7rem] font-medium tracking-[0.2em] uppercase text-muted mt-1 block">{label}</span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ───────────────────────────────────── -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+
+      <div class="flex items-end justify-between mb-16" data-reveal>
+        <div>
+          <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Domaines d'expertise</p>
+          <h2 class="font-display italic text-[clamp(1.75rem,3vw,2.5rem)] text-dark"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Cinq pôles de compétences.
+          </h2>
+        </div>
+        <a href="/expertise" class="btn-secondary hidden md:inline-flex">Voir tous →</a>
+      </div>
+
+      <div>
+        {[
+          { n: '01', href: '/expertise/droit-des-societes',       title: 'Droit des sociétés',        desc: 'Constitution, restructuration, gouvernance.' },
+          { n: '02', href: '/expertise/fusions-acquisitions',     title: 'Fusions-acquisitions',       desc: 'Audit juridique, négociation, closing.' },
+          { n: '03', href: '/expertise/droit-social',             title: 'Droit social',               desc: 'Relations individuelles et collectives de travail.' },
+          { n: '04', href: '/expertise/propriete-intellectuelle', title: 'Propriété intellectuelle',   desc: 'Marques, brevets, droits d\'auteur.' },
+          { n: '05', href: '/expertise/contentieux',              title: 'Contentieux',                desc: 'Litiges commerciaux, arbitrage, représentation.' },
+        ].map(({ n, href, title, desc }) => (
+          <a href={href} class="service-item block py-7 px-1">
+            <div class="flex items-center gap-6 relative">
+              <span class="font-display font-bold text-[3.5rem] leading-none w-16 shrink-0 select-none"
+                    style="font-family: 'Playfair Display', Georgia, serif; color: #f1f5f9;">{n}</span>
+              <div class="flex-1 min-w-0">
+                <h3 class="service-title text-[1.0625rem] font-semibold text-dark uppercase tracking-[0.1em] mb-1 transition-colors duration-200">{title}</h3>
+                <p class="text-sm font-light text-muted">{desc}</p>
+              </div>
+              <span class="service-cta text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent whitespace-nowrap shrink-0">
+                En savoir plus →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── TÉMOIGNAGE ─────────────────────────────────── -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="max-w-[700px] mx-auto text-center" data-reveal>
+        <span class="block font-display font-bold text-[6rem] text-center leading-none"
+              style="font-family: 'Playfair Display', Georgia, serif; color: #f8fafc; margin-bottom: -1.5rem;">"</span>
+        <blockquote class="font-display italic text-[clamp(1.25rem,2vw,1.625rem)] font-normal text-dark leading-[1.5]"
+                    style="font-family: 'Playfair Display', Georgia, serif;">
+          Valois & Associés a géré notre acquisition avec une rigueur et une disponibilité exemplaires. Une équipe qui comprend les enjeux business autant que les enjeux juridiques.
+        </blockquote>
+        <footer class="mt-6">
+          <span class="text-[0.75rem] font-medium tracking-[0.2em] uppercase text-accent">— Laurent Fabre</span>
+          <span class="text-[0.75rem] font-light text-muted ml-2">PDG, Groupe Fabre Industries</span>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BLOG ───────────────────────────────────────── -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+
+      <div class="flex items-end justify-between mb-16" data-reveal>
+        <div>
+          <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Actualités juridiques</p>
+          <h2 class="font-display italic text-[clamp(1.75rem,3vw,2.5rem)] text-dark"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Nos dernières publications.
+          </h2>
+        </div>
+        <a href="/actualites" class="btn-secondary hidden md:inline-flex">Voir toutes →</a>
+      </div>
+
+      <div>
+        {[
+          { href: '/actualites/le-cadre-juridique-des-fusions',     cat: 'Fusions-acquisitions', date: 'Janv. 2025', title: 'Le cadre juridique des fusions en 2025 : nouvelles obligations pour les parties', excerpt: 'Les récentes réformes législatives modifient en profondeur les procédures d\'audit et les garanties exigées lors des opérations de fusion.' },
+          { href: '/actualites/protection-propriete-intellectuelle', cat: 'Propriété intellectuelle', date: 'Nov. 2024', title: 'Protéger efficacement son patrimoine immatériel face aux risques numériques', excerpt: 'Dans un contexte de digitalisation accélérée, les actifs immatériels représentent souvent la principale valeur de l\'entreprise.' },
+          { href: '/actualites/droit-social-transformations-2025',   cat: 'Droit social', date: 'Oct. 2024', title: 'Transformations organisationnelles et obligations employeur : ce qui change en 2025', excerpt: 'Réorganisations, télétravail, ruptures conventionnelles collectives — le point sur le cadre légal applicable.' },
+        ].map(({ href, cat, date, title, excerpt }) => (
+          <a href={href} class="blog-item block py-8" style="border-bottom: 1px solid #f1f5f9;">
+            <div class="flex items-center gap-4 mb-3">
+              <span class="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">{cat}</span>
+              <span class="text-[0.75rem] text-muted font-light">{date}</span>
+            </div>
+            <h3 class="blog-title font-display font-normal text-[1.375rem] text-dark mb-2 leading-snug"
+                style="font-family: 'Playfair Display', Georgia, serif;">{title}</h3>
+            <p class="text-sm font-light text-body leading-relaxed max-w-2xl">{excerpt}</p>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── CTA ────────────────────────────────────────── -->
+  <section class="py-32">
+    <div class="max-w-[1100px] mx-auto px-8 text-center" data-reveal>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-5">Un projet, une question ?</p>
+      <h2 class="font-display text-[clamp(2rem,4vw,3.5rem)] font-bold text-dark mb-10 leading-tight"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Parlons de votre projet.
+      </h2>
+      <a href="/contact" class="btn-primary">
+        Prendre contact →
+      </a>
+    </div>
+  </section>
+
+</Layout>

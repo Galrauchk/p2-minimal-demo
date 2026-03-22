@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Propriété intellectuelle" description="Valois & Associés — Expertise en propriété intellectuelle : marques, brevets, droits d'auteur, contentieux en contrefaçon.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <a href="/expertise" class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted hover:text-accent transition-colors block mb-6">← Expertise</a>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Domaine 04</p>
+      <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Propriété intellectuelle.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Protéger et valoriser vos actifs immatériels dans un environnement numérique complexe.
+          </h2>
+          <div class="prose-minimal">
+            <p>Dans l'économie de la connaissance, les actifs immatériels — marques, brevets, logiciels, créations artistiques — constituent souvent la principale valeur des entreprises. Leur protection juridique est un enjeu stratégique que peu d'entreprises traitent avec la rigueur nécessaire.</p>
+            <p>Maître Thomas Maréchal accompagne des entreprises de toutes tailles, des start-ups innovantes aux groupes industriels, dans la construction et la défense de leur patrimoine immatériel.</p>
+            <h2>Protection et exploitation</h2>
+            <p>Nous définissons avec vous une stratégie de protection adaptée à vos actifs et à votre marché. Nous gérons les dépôts de marques (France, Europe, international), assistons dans les procédures de brevets, et rédigons les contrats de licence et de transfert de technologie.</p>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Nos missions</p>
+            <ul class="space-y-3">
+              {['Dépôt et gestion de marques', 'Stratégie brevets', 'Droits d\'auteur et logiciels', 'Contentieux en contrefaçon', 'Licences et transferts de technologie', 'Concurrence déloyale', 'Noms de domaine', 'Due diligence PI en M&A'].map(item => (
+                <li class="text-sm font-light text-body leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-0.5 shrink-0">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-10" style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Interlocuteur</p>
+            <p class="font-display italic text-lg text-dark"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Thomas Maréchal</p>
+            <a href="/contact" class="btn-secondary mt-4 inline-flex">Prendre rendez-vous →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

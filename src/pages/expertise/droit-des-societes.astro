@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Droit des sociétés" description="Valois & Associés — Expertise en droit des sociétés : constitution, gouvernance, cession, restructuration.">
+
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <a href="/expertise" class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted hover:text-accent transition-colors block mb-6">← Expertise</a>
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Domaine 01</p>
+      <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Droit des sociétés.
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Accompagner toutes les étapes de la vie juridique de votre entreprise.
+          </h2>
+          <div class="prose-minimal">
+            <p>Le droit des sociétés encadre l'ensemble de la vie juridique d'une entreprise, de sa création à sa dissolution, en passant par toutes les étapes de son développement. Maître Alexandre Valois, fondateur du cabinet, consacre l'essentiel de sa pratique à cette discipline.</p>
+            <p>Notre approche est résolument opérationnelle : nous ne nous contentons pas de rédiger des actes, nous vous aidons à comprendre les enjeux de chaque décision et à anticiper leurs conséquences.</p>
+            <h2>Nos interventions en droit des sociétés</h2>
+            <p>Nous intervenons à toutes les étapes : choix de la forme sociale, rédaction des statuts et pactes d'actionnaires, organisation de la gouvernance, accompagnement des cessions de titres, des augmentations de capital et des opérations de restructuration.</p>
+            <p>Nous conseillons également les dirigeants dans leurs relations avec leurs associés et dans la gestion des conflits qui peuvent surgir au sein des sociétés.</p>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">Missions types</p>
+            <ul class="space-y-3">
+              {['Constitution de SAS, SARL, SA', 'Rédaction de pactes d\'actionnaires', 'Cession de fonds de commerce', 'Augmentation de capital', 'Fusion, scission, apport partiel', 'Dissolution et liquidation', 'Conflits entre associés', 'Conseil aux dirigeants'].map(item => (
+                <li class="text-sm font-light text-body leading-relaxed flex items-start gap-2">
+                  <span class="text-accent mt-0.5 shrink-0">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="mt-10" style="border-left: 2px solid #f1f5f9; padding-left: 1.5rem;">
+            <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-3">Interlocuteur</p>
+            <p class="font-display italic text-lg text-dark"
+               style="font-family: 'Playfair Display', Georgia, serif;">Maître Alexandre Valois</p>
+            <a href="/contact" class="btn-secondary mt-4 inline-flex">Prendre rendez-vous →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-[1100px] mx-auto px-8" data-reveal>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px" style="background: #f1f5f9;">
+        {[
+          { n: '200+', label: 'Actes de cession rédigés' },
+          { n: '150+', label: 'Sociétés constituées' },
+          { n: '15', label: 'Années de pratique' },
+        ].map(({ n, label }) => (
+          <div class="bg-white py-10 px-8 text-center">
+            <span class="block font-display font-bold text-[2.5rem] text-dark"
+                  style="font-family: 'Playfair Display', Georgia, serif;">{n}</span>
+            <span class="text-[0.7rem] font-medium tracking-[0.2em] uppercase text-muted mt-2 block">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Notre cabinet" description="Valois & Associés — Cabinet d'avocats d'affaires fondé à Montpellier en 2008. Histoire, valeurs et approche.">
+
+  <!-- Page header -->
+  <section class="pt-[120px] pb-16" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-4">01 — Cabinet</p>
+      <h1 class="font-display font-bold text-[clamp(2.75rem,5vw,4.5rem)] text-dark leading-[1.05]"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Notre cabinet.
+      </h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[65%_35%] gap-20">
+        <div data-reveal>
+          <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] font-normal text-dark leading-[1.2] mb-7"
+              style="font-family: 'Playfair Display', Georgia, serif;">
+            Une pratique construite sur la confiance et la durée.
+          </h2>
+          <p class="text-base font-light text-body leading-[1.9] mb-5">
+            Valois & Associés est né de la conviction que les entreprises méritent un conseil juridique à la hauteur de leurs ambitions. Fondé en 2008 par Maître Alexandre Valois, le cabinet a rapidement élargi son équipe pour couvrir l'ensemble du droit des affaires.
+          </p>
+          <p class="text-base font-light text-body leading-[1.9] mb-5">
+            Notre ancrage à Montpellier, complété par des bureaux à Paris et Lyon, nous permet d'accompagner des entreprises locales, nationales et internationales dans leurs opérations les plus complexes.
+          </p>
+          <p class="text-base font-light text-body leading-[1.9]">
+            Nous croyons que la qualité d'un conseil juridique repose sur l'écoute, la disponibilité et la capacité à traduire des enjeux complexes en décisions claires et actionnables.
+          </p>
+        </div>
+        <div data-reveal class="pt-4">
+          <div style="border-left: 2px solid #0066ff; padding-left: 1.5rem;">
+            <p class="font-display italic text-lg font-normal text-dark leading-[1.5]"
+               style="font-family: 'Playfair Display', Georgia, serif;">
+              "Le droit des affaires n'est pas seulement une contrainte — c'est un levier de croissance pour ceux qui savent l'utiliser."
+            </p>
+            <p class="mt-4 text-[0.75rem] font-medium tracking-[0.2em] uppercase text-accent">
+              — Maître Alexandre Valois
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valeurs -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-12" data-reveal>Nos valeurs</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+        {[
+          { n: '01', title: 'Excellence', desc: 'Nous n\'acceptons pas la médiocrité. Chaque dossier est traité avec la même exigence, quelle que soit sa taille.' },
+          { n: '02', title: 'Disponibilité', desc: 'Un interlocuteur identifié, joignable, qui connaît votre dossier. Pas de délégation systématique aux juniors.' },
+          { n: '03', title: 'Pragmatisme', desc: 'Des conseils concrets, orientés décision. Nous traduisons la complexité juridique en options opérationnelles.' },
+        ].map(({ n, title, desc }, i) => (
+          <div class="py-10 pr-10" style={`border-right: ${i < 2 ? '1px solid #f1f5f9' : 'none'}; ${i > 0 ? 'padding-left: 2.5rem;' : ''}`} data-reveal>
+            <span class="font-display font-bold text-[3rem] leading-none block mb-4"
+                  style="font-family: 'Playfair Display', Georgia, serif; color: #f1f5f9;">{n}</span>
+            <h3 class="text-[0.875rem] font-semibold uppercase tracking-[0.15em] text-dark mb-3">{title}</h3>
+            <p class="text-sm font-light text-body leading-[1.8]">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Implantations -->
+  <section class="py-32" style="border-bottom: 1px solid #f1f5f9;">
+    <div class="max-w-[1100px] mx-auto px-8">
+      <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-12" data-reveal>Nos bureaux</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+        {[
+          { city: 'Montpellier', status: 'Siège social', addr: '12 rue du Palais des Guilhem', cp: '34000 Montpellier', tel: '04 67 11 22 33' },
+          { city: 'Paris', status: 'Bureau secondaire', addr: '45 avenue de l\'Opéra', cp: '75002 Paris', tel: '01 42 33 44 55' },
+          { city: 'Lyon', status: 'Bureau secondaire', addr: '8 rue de la République', cp: '69002 Lyon', tel: '04 72 40 11 22' },
+        ].map(({ city, status, addr, cp, tel }, i) => (
+          <div class="py-10 pr-10" style={`border-right: ${i < 2 ? '1px solid #f1f5f9' : 'none'}; ${i > 0 ? 'padding-left: 2.5rem;' : ''}`} data-reveal>
+            <h3 class="font-display italic text-2xl text-dark mb-1"
+                style="font-family: 'Playfair Display', Georgia, serif;">{city}</h3>
+            <p class="text-[0.65rem] font-medium tracking-[0.2em] uppercase text-accent mb-4">{status}</p>
+            <p class="text-sm font-light text-body leading-[1.8]">{addr}<br/>{cp}</p>
+            <a href={`tel:${tel.replace(/\s/g, '')}`} class="text-sm text-accent hover:opacity-80 transition-opacity mt-2 block">{tel}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+    <div class="max-w-[1100px] mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8" data-reveal>
+      <h2 class="font-display italic text-[clamp(1.5rem,2.5vw,2rem)] text-dark"
+          style="font-family: 'Playfair Display', Georgia, serif;">
+        Rencontrons-nous pour discuter de vos besoins.
+      </h2>
+      <a href="/contact" class="btn-primary shrink-0">Prendre contact →</a>
+    </div>
+  </section>
+
+</Layout>
