@@ -6,7 +6,21 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- ─── HERO ───────────────────────────────────────── -->
   <section class="relative min-h-screen flex flex-col justify-center pt-[68px]" style="border-bottom: 1px solid #f1f5f9;">
-    <div class="max-w-[1100px] mx-auto px-8 w-full py-24">
+
+    <!-- Fond très discret (opacity 5%) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&q=40&auto=format"
+        alt=""
+        class="w-full h-full object-cover"
+        style="opacity: 0.05;"
+        loading="eager"
+        width="1920"
+        height="1080"
+      />
+    </div>
+
+    <div class="max-w-[1100px] mx-auto px-8 w-full py-24 relative">
 
       <p class="text-[0.7rem] font-medium tracking-[0.3em] uppercase text-accent mb-10">
         Cabinet d'avocats · Montpellier Paris Lyon

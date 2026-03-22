@@ -10,6 +10,8 @@ const associes = [
     formation: 'Docteur en droit des affaires — Université Paris I Panthéon-Sorbonne',
     bio: 'Maître Alexandre Valois a fondé le cabinet en 2008 après une expérience de huit ans au sein de grands cabinets parisiens. Spécialiste des opérations de restructuration et des acquisitions complexes, il intervient régulièrement pour des groupes industriels et des fonds d\'investissement.',
     barreau: 'Barreau de Montpellier',
+    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=480&h=580&fit=crop&q=80&auto=format',
+    photoAlt: 'Portrait Maître Alexandre Valois',
   },
   {
     prenom: 'Claire',
@@ -19,6 +21,8 @@ const associes = [
     formation: 'Master 2 Droit social — Université Montpellier I',
     bio: 'Maître Claire Rousseau accompagne les directions des ressources humaines et les comités de direction dans toutes les problématiques sociales liées aux transformations d\'entreprise. Reconnue pour sa pédagogie, elle intervient en conseil comme en contentieux.',
     barreau: 'Barreau de Montpellier',
+    photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=480&h=580&fit=crop&q=80&auto=format',
+    photoAlt: 'Portrait Maître Claire Rousseau',
   },
   {
     prenom: 'Thomas',
@@ -28,6 +32,8 @@ const associes = [
     formation: 'LL.M. Intellectual Property — Queen Mary University of London',
     bio: 'Maître Thomas Maréchal est intervenu dans de nombreuses affaires de protection de marques, de contrefaçon et de litiges contractuels complexes. Bilingue français-anglais, il accompagne des entreprises tech et des groupes internationaux dans la valorisation et la défense de leur patrimoine immatériel.',
     barreau: 'Barreau de Paris',
+    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&h=580&fit=crop&q=80&auto=format',
+    photoAlt: 'Portrait Maître Thomas Maréchal',
   },
 ];
 ---
@@ -51,12 +57,17 @@ const associes = [
 
           <!-- Identité -->
           <div>
-            <!-- Avatar placeholder -->
-            <div class="w-32 h-32 bg-slate-50 flex items-center justify-center mb-8" style="border: 1px solid #f1f5f9;">
-              <span class="font-display font-bold text-3xl text-slate-200"
-                    style="font-family: 'Playfair Display', Georgia, serif;">
-                {a.prenom[0]}{a.nom[0]}
-              </span>
+            <!-- Portrait -->
+            <div class="overflow-hidden mb-8" style="width: 220px; height: 275px;">
+              <img
+                src={a.photo}
+                alt={a.photoAlt}
+                class="w-full h-full object-cover object-top"
+                style="filter: grayscale(12%); transition: filter 0.4s ease;"
+                loading="lazy"
+                width="220"
+                height="275"
+              />
             </div>
             <p class="text-[0.65rem] font-medium tracking-[0.3em] uppercase text-accent mb-2">0{i+1}</p>
             <h2 class="font-display text-[1.75rem] font-bold text-dark leading-tight"
