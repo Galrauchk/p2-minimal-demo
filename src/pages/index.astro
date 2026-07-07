@@ -1,8 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Valois & Associés",
+  "url": "https://p2-minimal-demo.netlify.app"
+};
 ---
 
-<Layout title="Accueil" description="Valois & Associés — Cabinet d'avocats d'affaires à Montpellier, Paris et Lyon. Excellence juridique au service de votre croissance.">
+<Layout title="Accueil" description="Valois & Associés — Cabinet d'avocats d'affaires à Montpellier, Paris et Lyon. Excellence juridique au service de votre croissance." schema={schema}>
 
   <!-- ─── HERO ───────────────────────────────────────── -->
   <section class="relative min-h-screen flex flex-col justify-center pt-[68px]" style="border-bottom: 1px solid #f1f5f9;">

@@ -6,11 +6,13 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  schema?: object;
 }
 
 const {
   title,
   description = "Valois & Associés — Cabinet d'avocats d'affaires à Montpellier, Paris et Lyon. Droit des sociétés, fusions-acquisitions, droit social, propriété intellectuelle.",
+  schema,
 } = Astro.props;
 ---
 
@@ -28,6 +30,8 @@ const {
       rel="stylesheet"
     />
     <title>{title} — Valois & Associés</title>
+
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body class="bg-white text-dark font-sans antialiased overflow-x-hidden">
 
