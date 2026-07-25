@@ -51,6 +51,7 @@ const allSchemas = [localBusinessSchema, ...pageSchemas];
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} — Valois & Associés</title>
+    <meta name="robots" content="noindex,nofollow" />
 
     {allSchemas.map((s) => (
       <script type="application/ld+json" set:html={JSON.stringify(s)} />
