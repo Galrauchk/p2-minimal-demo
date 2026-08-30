@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LegalPage from '../components/LegalPage.astro';
+
+
+const kind = 'mentions' as const;
+---
+
+<Layout title="Mentions légales : [NOM DE L'ENTREPRISE]" description="Éditeur, hébergement, propriété intellectuelle, données personnelles et contact.">
+  <LegalPage kind={kind} />
+</Layout>
+
