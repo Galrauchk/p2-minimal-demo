@@ -34,6 +34,6 @@
     "wrangler": "4.143.0"
   },
   "cloudflare": {
-    "domaine": "p2-minimal-demo.netlify.app"
+    "domaine": "demo-minimal.webtrafic.fr"
   }
 }
