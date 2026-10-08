@@ -21,8 +21,8 @@ User-agent: DuckAssistBot
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://p2-minimal-demo.netlify.app/sitemap-index.xml
+Sitemap: https://demo-minimal.webtrafic.fr/sitemap-index.xml
 
 # Index pour les agents IA / LLM (llmstxt.org)
-# https://p2-minimal-demo.netlify.app/llms.txt - index
-# https://p2-minimal-demo.netlify.app/llms-full.txt - contenu intégral
+# https://demo-minimal.webtrafic.fr/llms.txt - index
+# https://demo-minimal.webtrafic.fr/llms-full.txt - contenu intégral
